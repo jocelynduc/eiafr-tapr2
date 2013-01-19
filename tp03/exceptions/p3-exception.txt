@@ -1,0 +1,61 @@
+Contacting registry on localhost ...
+HelloServer exception: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.lang.ClassNotFoundException: rmi.hello.Hello
+java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.lang.ClassNotFoundException: rmi.hello.Hello
+	at sun.rmi.server.UnicastServerRef.oldDispatch(UnicastServerRef.java:413)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:267)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:553)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:808)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:667)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:255)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:233)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:359)
+	at sun.rmi.registry.RegistryImpl_Stub.rebind(Unknown Source)
+	at java.rmi.Naming.rebind(Naming.java:160)
+	at rmi.hello.HelloServer.main(HelloServer.java:23)
+Caused by: java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+	java.lang.ClassNotFoundException: rmi.hello.Hello
+	at sun.rmi.registry.RegistryImpl_Skel.dispatch(Unknown Source)
+	at sun.rmi.server.UnicastServerRef.oldDispatch(UnicastServerRef.java:403)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:267)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:553)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:808)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:667)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.ClassNotFoundException: rmi.hello.Hello
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:423)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at sun.rmi.server.LoaderHandler.loadProxyInterfaces(LoaderHandler.java:730)
+	at sun.rmi.server.LoaderHandler.loadProxyClass(LoaderHandler.java:674)
+	at sun.rmi.server.LoaderHandler.loadProxyClass(LoaderHandler.java:611)
+	at java.rmi.server.RMIClassLoader$2.loadProxyClass(RMIClassLoader.java:646)
+	at java.rmi.server.RMIClassLoader.loadProxyClass(RMIClassLoader.java:311)
+	at sun.rmi.server.MarshalInputStream.resolveProxyClass(MarshalInputStream.java:257)
+	at java.io.ObjectInputStream.readProxyDesc(ObjectInputStream.java:1549)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1511)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1750)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1347)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:369)
+	... 13 more
